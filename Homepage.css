@@ -8,6 +8,10 @@ body {
 .topnav {
     background-color: #333;
     overflow: hidden;
+    position: fixed;
+    display: block;
+    top: 0;
+    width: 100%;
 }
 
 
@@ -39,5 +43,5 @@ body {
 }*/
 
 .floatRight {
-    float: right;
+    float: inline-end;
 }
