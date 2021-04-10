@@ -1,61 +1,112 @@
 :root {
     font-size: 48px;
+    box-sizing: border-box;
+    --NavBackground: #333;
+    --HoverColorP: #38414b;
+    --HoverColorS: #22282f;
+    --Textcolor: #f2f2f2;
+    --BodyBackground: #283338;
+    --HighlightColor: #f8ff00;
+    --BoxBackground: #293440;
 }
 
 body {
-    background-color: #283338;
+    background-color: var(--BodyBackground);
 }
 
-
-/* Add a black background color to the top navigation */
-
-.topnav {
-    background-color: #333;
-    overflow: hidden;
+header {
     position: fixed;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    width: 100%;
+    top: 0;
+}
+
+nav {
+    background-color: var(--NavBackground);
+    display: block;
+    width: 100%;
+    height: 2em;
+}
+
+nav a {
+    color: var(--Textcolor);
+    text-align: center;
+    margin: 0;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+nav>ul>li:hover {
+    background-color: var(--HoverColorP);
+}
+
+nav>ul>li>ul>li>a:hover {
+    background-color: var(--HoverColorS);
+}
+
+nav ul {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    top: 0;
-    width: 100%;
-    height: 2em;
-    flex-grow: 1
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 100%;
 }
 
+#DropDown {
+    display: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    height: 100%;
+    width: max-content;
+    z-index: 1;
+}
 
-/* Style the links inside the navigation bar */
+#Projects:hover ul#DropDown {
+    display: block;
+}
 
-.topnav a {
-    color: #f2f2f2;
+header>nav>ul>li {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100%;
+}
+
+header>nav>ul>li>a {
+    display: block;
+    height: 100%;
+    width: max-content;
     text-align: center;
-    padding: auto;
-    margin: auto;
-    border: 1px, solid, black;
-    text-decoration: none;
-    font-size: 1.5em;
-    size: auto;
+    width: fit-content;
 }
 
-
-/* Change the color of links on hover */
-
-.topnav a:hover {
-    background-color: #9C9C9C;
-    color: black;
+nav>ul>li>ul>li {
+    background-color: var(--HoverColorP);
+    position: relative;
+    /*transition: all linear 0.1s;*/
 }
 
+nav>ul>li>ul>li>a {
+    display: block;
+    text-align: left;
+    width: fill;
+    font-size: 1.25em;
+    line-height: 1.6em;
+}
 
-/* Add a color to the active/current link */
+nav>ul>li>ul {
+    position: absolute;
+}
 
-.topnav a.active {
-    color: #f8ff00;
+nav a.active {
+    color: var(--HighlightColor);
 }
 
 .siteBody {
     margin-top: 2em;
-    color: white
+    color: var(--Textcolor);
 }
 
 .homeBox {
@@ -65,7 +116,7 @@ body {
     padding: 5px;
     border: 1px solid black;
     border-radius: 5px;
-    background-color: #293440;
+    background-color: var(--BoxBackground);
     text-align: center;
     /*align-content: center;*/
     margin: auto;
