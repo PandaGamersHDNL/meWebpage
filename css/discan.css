@@ -1,0 +1,10 @@
+.siteBody {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.homeBox {
+    margin: 5px;
+}

@@ -1,13 +1,13 @@
 :root {
     font-size: 48px;
     box-sizing: border-box;
-    --NavBackground: #333;
-    --HoverColorP: #38414b;
-    --HoverColorS: #22282f;
-    --Textcolor: #f2f2f2;
-    --BodyBackground: #283338;
-    --HighlightColor: #f8ff00;
-    --BoxBackground: #293440;
+    --NavBackground: #7289DA;
+    --HoverColorP: #089EAC;
+    --HoverColorS: #40444B;
+    --Textcolor: white;
+    --BodyBackground: #202225;
+    --HighlightColor: #EF4A25;
+    --BoxBackground: #292B2F;
 }
 
 body {
@@ -23,7 +23,6 @@ header {
 nav {
     background-color: var(--NavBackground);
     display: block;
-    width: 100%;
     height: 2em;
 }
 
@@ -43,7 +42,7 @@ nav>ul>li>ul>li>a:hover {
     background-color: var(--HoverColorS);
 }
 
-nav ul {
+nav>ul {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -65,21 +64,23 @@ nav ul {
 
 #Projects:hover ul#DropDown {
     display: block;
+    width: 100%;
 }
 
 header>nav>ul>li {
     margin: 0;
     padding: 0;
     position: relative;
+    width: 100%;
     height: 100%;
+    text-align: center;
 }
 
 header>nav>ul>li>a {
     display: block;
     height: 100%;
-    width: max-content;
+    width: fill;
     text-align: center;
-    width: fit-content;
 }
 
 nav>ul>li>ul>li {
@@ -98,6 +99,7 @@ nav>ul>li>ul>li>a {
 
 nav>ul>li>ul {
     position: absolute;
+    overflow: visible;
 }
 
 nav a.active {
@@ -122,6 +124,7 @@ nav a.active {
     margin: auto;
     margin-top: 5px;
     padding: 20px;
+    overflow: auto;
 }
 
 h1 {
@@ -146,12 +149,27 @@ p {
     margin-bottom: 1em;
     margin-left: 0;
     margin-right: 0;
+    height: auto;
+}
+
+.homeBox ul {
+    list-style: disc;
+    align-content: left;
+    margin: 5px;
+    text-align: left;
+    list-style-position: inside;
+    align-items: flex-start;
+}
+
+.homeBox li {
+    margin: 5px;
 }
 
 img {
-    float: left;
+    float: right;
     height: 250px;
     width: 250px;
+    display: block;
 }
 
 form {
@@ -165,5 +183,9 @@ form {
 }
 
 textarea {
+    font-size: 1em;
+}
+
+header::after {
     font-size: 1em;
 }
