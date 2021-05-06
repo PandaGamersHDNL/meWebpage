@@ -9,6 +9,22 @@
     <link href="../../css/general.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/discan.css">
     <title>Contact me</title>
+    <script src="../../jquery.js"></script>
+    <script>
+        $('body').ready(function() {
+            let index = 0;
+            $($('.slide').get(index)).show()
+                //add arrows for buttons to switch slides
+            $('.homeBox').click(function() {
+                let slides = $('.slide')
+                $(slides.get(index++)).hide();
+                if (index >= slides.length) {
+                    index = 0;
+                }
+                $(slides.get(index)).show();
+            })
+        });
+    </script>
 </head>
 
 <body>
@@ -41,17 +57,40 @@
                 For this project we needed a data base and a Canvas instance for testing. we store relavent data this include tokens that have to be encrypted incase of data breaches
             </p>
         </div>
-        <div class="homeBox">
-            <h2>features</h2>
-            <img alt="slide show of features" />
-            <p>
-                <ul>
-                    <li>create course channels</li>
-                    <li>send announcements in course channels</li>
-                    <li>give users student/teacher roles</li>
-                </ul>
-            </p>
-
+        <div class="homeBox" id="slideshowContainer">
+            <h1>Features</h1>
+            <div id="slideContainer">
+                <div class="slide">
+                    <h2>Help</h2>
+                    <p>Shows a list of all the commands you can do</p>
+                    <img class="slidePic" src="../../imgs/featureSlides/help.PNG" alt="pic of help cmd response" />
+                </div>
+                <div class="slide">
+                    <h2>Reminders</h2>
+                    <p>How to use the reminder command. </p>
+                    <img class="slidePic" src="../../imgs/featureSlides/reminder.PNG" alt="pic of reminder cmd response" />
+                </div>
+                <div class="slide">
+                    <h2>info</h2>
+                    <p>This command shows information that the guild can choose.</p>
+                    <img class="slidePic" src="../../imgs/featureSlides/info.PNG" alt="pic of info response" />
+                </div>
+                <div class="slide">
+                    <h2>Notes</h2>
+                    <p>This command makes it possible to set notes about anything in any channel.</p>
+                    <img class="slidePic" src="../../imgs/featureSlides/notes.PNG" alt="pic of info response" />
+                </div>
+                <div class="slide">
+                    <h2>course channels</h2>
+                    <p>The bot creates channels automatically. this is highly customizable. Admins can change permissions and names of these channels to give them your own spin.</p>
+                    <img class="slidePic" src="../../imgs/featureSlides/notes.PNG" alt="pic of info response" />
+                </div>
+                <div class="slide">
+                    <h2>announcements</h2>
+                    <p>makes it possible to set notes about anything in any channel</p>
+                    <img class="slidePic" src="../../imgs/featureSlides/announcement.PNG" alt="pic of info response" />
+                </div>
+            </div>
         </div>
     </div>
 </body>

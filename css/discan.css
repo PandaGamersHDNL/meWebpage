@@ -8,3 +8,34 @@
 .homeBox {
     margin: 5px;
 }
+
+.slide {
+    display: none;
+    flex-wrap: wrap;
+    white-space: normal;
+}
+
+
+/*
+.slide p {
+    display: flex;
+    flex-wrap: wrap;
+    word-break: break-all;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}*/
+
+.slidePic {
+    float: none;
+    height: auto;
+    width: auto;
+    align-items: center;
+}
+
+#slideContainer {
+    display: flex;
+    width: 100%;
+    overflow: auto;
+    justify-items: auto;
+}
