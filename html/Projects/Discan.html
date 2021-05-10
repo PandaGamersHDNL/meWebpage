@@ -11,18 +11,19 @@
     <title>Contact me</title>
     <script src="../../jquery.js"></script>
     <script>
+        function nextSlide(indexChange) {
+            let slides = $('.slide')
+            $(slides.get(index)).hide();
+            index += indexChange;
+            if (index >= slides.length) {
+                index = 0;
+            }
+            $(slides.get(index)).show();
+        }
+        let index = 0;
         $('body').ready(function() {
-            let index = 0;
             $($('.slide').get(index)).show()
-                //add arrows for buttons to switch slides
-            $('.homeBox').click(function() {
-                let slides = $('.slide')
-                $(slides.get(index++)).hide();
-                if (index >= slides.length) {
-                    index = 0;
-                }
-                $(slides.get(index)).show();
-            })
+
         });
     </script>
 </head>
@@ -51,15 +52,10 @@
                 Project integrates Canvas LMS to Discord. Canvas is a learning management system that helps teachers and students. This Group thought that it was a hassle to always have to go to Canvas. Considering we use discord daily we thought this was a good idea.
             </p>
         </div>
-        <div class="homeBox">
-            <h2>Costs and needs</h2>
-            <p>
-                For this project we needed a data base and a Canvas instance for testing. we store relavent data this include tokens that have to be encrypted incase of data breaches
-            </p>
-        </div>
         <div class="homeBox" id="slideshowContainer">
             <h1>Features</h1>
             <div id="slideContainer">
+                <a class="slideArrow" onclick="nextSlide(-1)">&#9664;</a>
                 <div class="slide">
                     <h2>Help</h2>
                     <p>Shows a list of all the commands you can do</p>
@@ -90,7 +86,23 @@
                     <p>makes it possible to set notes about anything in any channel</p>
                     <img class="slidePic" src="../../imgs/featureSlides/announcement.PNG" alt="pic of info response" />
                 </div>
+                <a class="slideArrow" onclick="nextSlide(1)">&#9654;</a>
             </div>
+        </div>
+        <div class="homeBox">
+            <h2>Costs and needs</h2>
+            <p>
+                For this project we needed a data base and a Canvas instance for testing. we store relavent data this include tokens that have to be encrypted incase of data breaches
+            </p>
+        </div>
+        <div class="homeBox">
+            <h2>block diagram</h2>
+            <p>
+                A user sends a command in the server where the bot is listening. it finds a command and does what it has to. if it needs access to any stored info. it will send a request to the API. the API will handle this request and get the appropriat data. This data
+                will then be sent back to the bot and used as it has to. There are also processes like channel creation that happen every so often. This will do all the requests for data and handelings to present the data to the bot. The bot will then
+                send the data to the right discord server(s)
+            </p>
+            <img id=blockDia src="../../imgs/blockDiagram.svg" alt="block diagram" />
         </div>
     </div>
 </body>

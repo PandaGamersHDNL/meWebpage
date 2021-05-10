@@ -9,12 +9,6 @@
     margin: 5px;
 }
 
-.slide {
-    display: none;
-    flex-wrap: wrap;
-    white-space: normal;
-}
-
 
 /*
 .slide p {
@@ -28,9 +22,10 @@
 
 .slidePic {
     float: none;
-    height: auto;
     width: auto;
-    align-items: center;
+    height: auto;
+    margin: auto;
+    max-width: 98%;
 }
 
 #slideContainer {
@@ -38,4 +33,23 @@
     width: 100%;
     overflow: auto;
     justify-items: auto;
+}
+
+.slide {
+    display: none;
+    white-space: normal;
+    width: auto;
+}
+
+.slideArrow {
+    /*align-self: ;*/
+    display: block;
+    width: auto;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+#blockDia {
+    height: auto;
+    width: auto;
 }
