@@ -1,3 +1,4 @@
 body {
     background-image: url('../imgs/github.png');
+    background-repeat: repeat;
 }
