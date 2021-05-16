@@ -10,16 +10,12 @@ input[type=submit],
 [type=reset] {
     border-radius: 60%;
     padding: 2%;
+    margin: 1%;
 }
 
 input:hover,
 textarea:hover {
     background-color: var(--HoverColorP);
-}
-
-form {
-    align-content: left;
-    text-align: left;
 }
 
 #textareaLabel {

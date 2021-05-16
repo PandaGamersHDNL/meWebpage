@@ -5,10 +5,6 @@
     justify-content: space-evenly;
 }
 
-.homeBox {
-    margin: 5px;
-}
-
 .slidePic {
     float: none;
     width: auto;
@@ -26,14 +22,13 @@
 
 .slide {
     display: none;
-    white-space: normal;
     flex-grow: 1;
 }
 
 .slideArrow {
     display: block;
     width: auto;
-    padding-top: auto;
+    padding-top: .25em;
     padding-bottom: auto;
 }
 

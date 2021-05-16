@@ -1,5 +1,6 @@
 :root {
-    font-size: 32px;
+    --fontSize: 32px;
+    font-size: var(--fontSize);
     box-sizing: border-box;
     --NavBackground: #7289DA;
     --HoverColorP: #089EAC;
@@ -12,12 +13,14 @@
 
 body {
     background-color: var(--BodyBackground);
+    max-width: 100%;
 }
 
 header {
-    position: fixed;
+    position: sticky;
     width: 100%;
     top: 0;
+    min-width: 25em;
 }
 
 footer {
@@ -27,13 +30,12 @@ footer {
     color: var(--Textcolor);
     position: fixed;
     background-color: var(--NavBackground);
-    padding: .5%;
+    padding: .5em;
 }
 
 nav {
     background-color: var(--NavBackground);
     display: block;
-    height: 2em;
 }
 
 nav a {
@@ -42,6 +44,8 @@ nav a {
     margin: 0;
     text-decoration: none;
     font-size: 1.5em;
+    margin: 0;
+    padding: calc(var(--fontSize)/4) calc(var(--fontSize)/8);
 }
 
 nav>ul>li:hover {
@@ -56,8 +60,6 @@ nav>ul {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
     list-style: none;
     height: 100%;
 }
@@ -116,23 +118,22 @@ nav a.active {
 }
 
 .siteBody {
-    margin-top: 2em;
     color: var(--Textcolor);
 }
 
 .homeBox {
+    width: 30em;
     max-width: 70%;
-    min-width: 600px;
+    min-width: 25em;
     display: block;
-    border: 1% solid black;
     border-radius: 1%;
     background-color: var(--BoxBackground);
     text-align: center;
-    margin: auto;
-    width: 40%;
-    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
     padding: 1%;
-    overflow: auto;
+    overflow: scroll;
 }
 
 h1 {
@@ -151,14 +152,10 @@ p {
     display: block;
     margin-top: 1em;
     margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
     height: auto;
-    white-space: normal;
 }
 
 .homeBox ul {
-    list-style: disc;
     align-content: left;
     margin: 5px;
     text-align: left;
