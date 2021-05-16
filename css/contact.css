@@ -18,6 +18,11 @@ textarea:hover {
     background-color: var(--HoverColorP);
 }
 
+input:focus,
+textarea:focus {
+    background-color: var(--HighlightColor);
+}
+
 #textareaLabel {
     vertical-align: top;
 }

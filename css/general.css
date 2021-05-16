@@ -133,7 +133,7 @@ nav a.active {
     margin-right: auto;
     margin-top: 1em;
     padding: 1%;
-    overflow: scroll;
+    overflow: auto;
 }
 
 h1 {
