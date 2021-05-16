@@ -1,5 +1,5 @@
 :root {
-    font-size: 48px;
+    font-size: 32px;
     box-sizing: border-box;
     --NavBackground: #7289DA;
     --HoverColorP: #089EAC;
@@ -18,6 +18,16 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
+}
+
+footer {
+    font-size: .5em;
+    bottom: 0;
+    width: 100%;
+    color: var(--Textcolor);
+    position: fixed;
+    background-color: var(--NavBackground);
+    padding: .5%;
 }
 
 nav {
@@ -79,7 +89,6 @@ header>nav>ul>li {
 header>nav>ul>li>a {
     display: block;
     height: 100%;
-    width: fill;
     text-align: center;
 }
 
@@ -112,21 +121,18 @@ nav a.active {
 }
 
 .homeBox {
-    max-width: 800px;
+    max-width: 70%;
     min-width: 600px;
     display: block;
-    padding: 5px;
-    border: 1px solid black;
-    border-radius: 5px;
+    border: 1% solid black;
+    border-radius: 1%;
     background-color: var(--BoxBackground);
     text-align: center;
-    /*align-content: center;*/
     margin: auto;
-    /*width: 40%;*/
-    margin-top: 5px;
-    padding: 20px;
+    width: 40%;
+    margin-top: 2%;
+    padding: 1%;
     overflow: auto;
-    height: auto;
 }
 
 h1 {
@@ -139,10 +145,6 @@ h2 {
     display: block;
     font-size: 1.5em;
     font-weight: bold;
-}
-
-input {
-    font-size: 1em;
 }
 
 p {
@@ -173,20 +175,6 @@ img {
     height: 250px;
     width: 250px;
     display: block;
-}
-
-form {
-    align-content: left;
-    text-align: left;
-    vertical-align: top;
-}
-
-#textareaLabel {
-    vertical-align: top;
-}
-
-textarea {
-    font-size: 1em;
 }
 
 header::after {

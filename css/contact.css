@@ -1,0 +1,33 @@
+input {
+    padding: .5%;
+    margin: .5%;
+    font-size: 1em;
+    background: var(--BodyBackground);
+    color: var(--Textcolor);
+}
+
+input[type=submit],
+[type=reset] {
+    border-radius: 60%;
+    padding: 2%;
+}
+
+input:hover,
+textarea:hover {
+    background-color: var(--HoverColorP);
+}
+
+form {
+    align-content: left;
+    text-align: left;
+}
+
+#textareaLabel {
+    vertical-align: top;
+}
+
+textarea {
+    font-size: 1em;
+    background-color: var(--BodyBackground);
+    color: var(--Textcolor)
+}

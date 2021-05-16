@@ -9,17 +9,6 @@
     margin: 5px;
 }
 
-
-/*
-.slide p {
-    display: flex;
-    flex-wrap: wrap;
-    word-break: break-all;
-    width: 100%;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}*/
-
 .slidePic {
     float: none;
     width: auto;
@@ -38,11 +27,10 @@
 .slide {
     display: none;
     white-space: normal;
-    width: auto;
+    flex-grow: 1;
 }
 
 .slideArrow {
-    /*align-self: ;*/
     display: block;
     width: auto;
     padding-top: auto;

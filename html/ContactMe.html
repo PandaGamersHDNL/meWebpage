@@ -7,14 +7,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/reset.css" rel="stylesheet">
     <link href="../css/general.css" rel="stylesheet">
+    <link href="../css/contact.css" rel="stylesheet" />
     <title>Contact me</title>
+    <script src="../jquery.js"></script>
+    <script>
+        function validateForm() {
+            let error = []
+            if (document.getElementById("firstName").value == '') {
+                error.push('first name');
+            }
+            if (document.getElementById("lastName").value == '') {
+                error.push('last name');
+            }
+            if (document.getElementById('comments').value == '') {
+                error.push('comments');
+            }
+
+            if (error.length == 0) {
+                $('formError').hide();
+                return true;
+            }
+            $("#formError").show()
+            $('#formError').html('please fill following boxes in correctly: ' + error.join(', ')).css('color', 'red');
+            return false;
+        }
+
+        function resetForm() {
+            if (confirm("are you sure you want to reset the form?")) {
+                $('#formError').hide();
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
 </head>
 
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="./HomePage.html">Home</a></li>
+                <li><a href="./Index.html">Home</a></li>
                 <li id="Projects"><a>Projects &darr;</a>
                     <ul id="DropDown">
                         <li><a href="./Projects/Discan.html">discan</a></li>
@@ -28,25 +61,27 @@
     </header>
     <div class="siteBody">
         <div class="homeBox">
-            <form action="mailto:joachim.jacobs222@gmail.com?subject=Porfolio: your subject" method="post" enctype="text/plain">
+            <form action="mailto:joachim.jacobs222@gmail.com?subject=Contact:YourSubject" enctype="text/plain" method="post" onsubmit="return validateForm()" onreset="return resetForm()">
                 <h1>Contact form</h1>
                 <p>
                     <label for="firstName">First name:</label>
-                    <input type="text" id="firstName" name="firstName"><br/>
+                    <input type="text" id="firstName" name="firstName"><br />
                     <label for="lastName">Last name:</label>
-                    <input type="text" id="lastName" name="lastName"><br/>
+                    <input type="text" id="lastName" name="lastName"><br />
                     <label for="comments" id="textareaLabel">comments:</label>
-                    <textarea type="text" id="comments" name="lastName" rows="4" cols="32"></textarea><br/>
+                    <textarea id="comments" name="comments" rows="4" cols="16"></textarea><br />
                 </p>
+                <p id="formError"></p>
                 <input type="submit" value="Submit"><input type="reset" value="Reset">
             </form>
         </div>
         <div class="homeBox">
             <h2>other platforms </h2>
-            <p>Discord: PandaGamersHDNL#1693<br/> GitHub: https://github.com/PandaGamersHDNL <br/> </p>
+            <p>Discord: PandaGamersHDNL#1693<br /> GitHub: https://github.com/PandaGamersHDNL <br /> </p>
 
         </div>
     </div>
+    <footer>Copyright &#169; Thomas More Mechelen-Antwerpen vzw - Campus De Nayer - Professionelebachelor elektronica-ict – 2021</footer>
 </body>
 
 </html>
